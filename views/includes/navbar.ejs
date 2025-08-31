@@ -1,0 +1,61 @@
+ 
+<style>
+  .btnSearch{
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+  }
+
+  .btnSearch:hover{
+    background-color: #fe424d;
+    color: #fff;
+  }
+
+  .searchBox{
+    border-radius: 20px;
+    padding: 0 4.5rem 0 4.5rem;
+  }
+
+  
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass-drafting"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <b><a class="nav-link" href="/listings">Explore</a></b>
+        
+      </div>
+
+      <div class="navbar-nav ms-auto">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 searchBox" type="search" placeholder="Search Destination" />
+          <button class="btn btnSearch" type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+
+      <div class="navbar-nav ms-auto">
+
+        
+          <b><a class="nav-link" href="/listings/new">Become Host</a></b>
+          <% if(!currUser) { %>
+          <b><a class="nav-link "  href="/signup">SignUp</a></b>
+          <b><a class="nav-link" href="/Login">Login</a></b>
+          <% } %>
+        
+        
+
+
+          <% if(currUser) { %>
+          <b><a class="nav-link" href="/logout">LogOut</a></b>
+          <% } %>
+        
+
+      </div>
+    </div>
+  </div>
+</nav>
